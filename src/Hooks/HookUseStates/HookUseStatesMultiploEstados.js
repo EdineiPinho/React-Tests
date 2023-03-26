@@ -3,7 +3,7 @@ import React from 'react'
 const HookUseStatesMultiploEstados = () => {
   let [contar, setContar] = React.useState(0);
   const [ativo, setAtivo] = React.useState(false);
-  const [dados, setDados] = React.useState({ nome: 'Michel', idade: '', profissao: '' })
+  const [dados, setDados] = React.useState({ nome: '', idade: '', profissao: '' })
 
   function handleForm(e) {
     console.log(this);

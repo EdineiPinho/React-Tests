@@ -1,12 +1,12 @@
 import React from 'react';
-import HookUseStatesMultiploEstados from './Hooks/HookUseStates/HookUseStatesMultiploEstados';
+import HookUseStatesAPI from './Hooks/HookUseStates/HookUseStatesAPI';
 
 
 
 const App = () => {
 
   return (<React.Fragment>
-    <HookUseStatesMultiploEstados />
+    <HookUseStatesAPI />
   </React.Fragment>);
 };
 
