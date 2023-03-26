@@ -1,13 +1,12 @@
 import React from 'react';
-import Home from './Home';
-import Produtos from './Produtos';
+import HookUseStatesMultiploEstados from './Hooks/HookUseStates/HookUseStatesMultiploEstados';
+
 
 
 const App = () => {
-  const pagina = document.location.pathname;
-  if (pagina === '/produtos') return <Produtos />;
+
   return (<React.Fragment>
-    <Home />
+    <HookUseStatesMultiploEstados />
   </React.Fragment>);
 };
 
