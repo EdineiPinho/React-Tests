@@ -1,15 +1,13 @@
 import React from 'react';
-import Titulo from './Titulo';
-import Header from './Header';
-import Footer from "./Footer";
-import Form from "./Form/Form";
+import Home from './Home';
+import Produtos from './Produtos';
+
 
 const App = () => {
+  const pagina = document.location.pathname;
+  if (pagina === '/produtos') return <Produtos />;
   return (<React.Fragment>
-    <Header />
-    <Titulo cor="cyan" texto="Meu título 1">Aqui dentro é o children</Titulo>
-    <Form />
-    <Footer classe="footer" />
+    <Home />
   </React.Fragment>);
 };
 
