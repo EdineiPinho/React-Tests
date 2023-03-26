@@ -1,12 +1,10 @@
 import React from 'react';
-import HookUseStatesAPI from './Hooks/HookUseStates/HookUseStatesAPI';
-
-
+import HookUseEffect from './Hooks/HookUseEffect/HookUseEffect';
 
 const App = () => {
 
   return (<React.Fragment>
-    <HookUseStatesAPI />
+    <HookUseEffect />
   </React.Fragment>);
 };
 
