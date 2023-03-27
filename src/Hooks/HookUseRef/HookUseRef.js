@@ -28,7 +28,7 @@ const HookUseRef = () => {
     <React.Fragment>
       <ul ref={listElements}>
         {task.map((tarefa, index) => (
-          <li id={`id${index}`} key={index} className="listItem">{tarefa}<a style={estiloBotao} title="Excluir tarefa" onClick={excluirTarefa}>x</a></li>
+          <li id={`id${index}`} key={index} className="listItem">{tarefa}<a href='/' style={estiloBotao} title="Excluir tarefa" onClick={excluirTarefa}>x</a></li>
         ))}
       </ul>
       <label for='tasks'>Nova Tarefa</label>
