@@ -1,10 +1,10 @@
 import React from 'react';
-import HookUseEffect from './Hooks/HookUseEffect/HookUseEffect';
+import HookUseRef from './Hooks/HookUseRef/HookUseRef';
 
 const App = () => {
 
   return (<React.Fragment>
-    <HookUseEffect />
+    <HookUseRef />
   </React.Fragment>);
 };
 
