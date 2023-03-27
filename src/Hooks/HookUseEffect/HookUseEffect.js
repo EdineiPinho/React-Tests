@@ -18,7 +18,7 @@ const HookUseEffect = () => {
   }
 
   function handleClique(e) {
-    const produto = e.target.innerText
+    const produto = (e.target.innerText).toLowerCase();
     fetchProduct(produto);
     localStorage.setItem('dados', produto)
   }
@@ -28,11 +28,11 @@ const HookUseEffect = () => {
     setDados(null);
   }
 
-
+  console.log(dados);
   return (
     <div>
-      <button onClick={handleClique}>notebook</button>
-      <button onClick={handleClique}>smartphone</button>
+      <button style={{ marginRight: "12px" }} onClick={handleClique}>Notebook</button>
+      <button onClick={handleClique}>Smartphone</button>
       {dados && <Produto dados={dados} />}
       <br />
       <br />
