@@ -16,13 +16,21 @@ const HookUseRef = () => {
     setTask([...task, input]);
     setInput('');
     inputElement.current.focus();
+    console.log('clicou');
   }
   function excluirTarefa(e) {
     const indexNumber = e.currentTarget.parentElement.id[2];
     const tarefas = [...task];
     tarefas.splice(indexNumber, 1);
     setTask(tarefas);
+    console.log('Excluiu tarefa');
   }
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleClick();
+    }
+  };
 
   return (
     <React.Fragment>
@@ -40,9 +48,10 @@ const HookUseRef = () => {
         value={input}
         onChange={
           ({ target }) => setInput(target.value)
-        } />
+        }
+        onKeyDown={handleKeyDown}
+      />
       <br />
-      <button onClick={handleClick}>Adicionar Tarefa</button>
     </React.Fragment>)
 }
 
