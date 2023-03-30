@@ -5,6 +5,13 @@ const HookUseRef = () => {
   const [input, setInput] = React.useState('');
   const inputElement = React.useRef();
   const listElements = React.useRef();
+  React.useEffect(() => {
+    if ((localStorage.getItem('data')) && (localStorage.getItem('data'))) {
+      const dados = localStorage.getItem('data');
+      const dadosArr = JSON.parse(dados);
+      setTask(dadosArr);
+    }
+  }, [])
   const estiloBotao = {
     width: '32px',
     height: '32px',
@@ -14,6 +21,7 @@ const HookUseRef = () => {
   };
   function handleClick() {
     setTask([...task, input]);
+    setLocalStorage([...task, input]);
     setInput('');
     inputElement.current.focus();
   }
@@ -23,12 +31,18 @@ const HookUseRef = () => {
     const tarefas = [...task];
     tarefas.splice(indexNumber, 1);
     setTask(tarefas);
+    setLocalStorage(tarefas);
   }
-  const handleKeyDown = (event) => {
+  function handleKeyDown(event) {
     if (event.key === 'Enter') {
       handleClick();
     }
-  };
+  }
+  function setLocalStorage(tarefas) {
+    const arr = tarefas;
+    const jsonArr = JSON.stringify(arr);
+    localStorage.setItem('data', jsonArr);
+  }
   return (
     <React.Fragment>
       <label for='tasks'>Nova Tarefa</label>
