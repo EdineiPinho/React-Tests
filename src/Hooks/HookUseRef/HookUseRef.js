@@ -16,29 +16,21 @@ const HookUseRef = () => {
     setTask([...task, input]);
     setInput('');
     inputElement.current.focus();
-    console.log('clicou');
   }
   function excluirTarefa(e) {
+    e.preventDefault();
     const indexNumber = e.currentTarget.parentElement.id[2];
     const tarefas = [...task];
     tarefas.splice(indexNumber, 1);
     setTask(tarefas);
-    console.log('Excluiu tarefa');
   }
-
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       handleClick();
     }
   };
-
   return (
     <React.Fragment>
-      <ul ref={listElements}>
-        {task.map((tarefa, index) => (
-          <li id={`id${index}`} key={index} className="listItem">{tarefa}<a href='/' style={estiloBotao} title="Excluir tarefa" onClick={excluirTarefa}>x</a></li>
-        ))}
-      </ul>
       <label for='tasks'>Nova Tarefa</label>
       <input
         ref={inputElement}
@@ -52,6 +44,13 @@ const HookUseRef = () => {
         onKeyDown={handleKeyDown}
       />
       <br />
+      <button onClick={handleClick} >Adicionar Tarefa</button>
+      <h2 style={{ fontFamily: 'sans-serif', paddingTop: '24px' }}>Lista de Tarefas:</h2>
+      <ul ref={listElements}>
+        {task.map((tarefa, index) => (
+          <li id={`id${index}`} key={index} className="listItem">{tarefa}<a href='/' style={estiloBotao} title="Excluir tarefa" onClick={excluirTarefa}>x</a></li>
+        ))}
+      </ul>
     </React.Fragment>)
 }
 
