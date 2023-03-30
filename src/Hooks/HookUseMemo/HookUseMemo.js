@@ -1,5 +1,4 @@
 import React from 'react';
-
 function operacaoLenta() {
   let c;
   for (let i = 0; i < 10000000; i++) {
@@ -7,7 +6,6 @@ function operacaoLenta() {
   }
   return c;
 }
-
 const HookUseMemo = () => {
   const [contar, setContar] = React.useState(0);
   const t1 = performance.now();
@@ -19,5 +17,4 @@ const HookUseMemo = () => {
     </>
   );
 }
-
 export default HookUseMemo;
