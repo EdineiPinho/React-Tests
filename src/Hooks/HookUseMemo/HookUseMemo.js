@@ -1,18 +1,19 @@
 import React from 'react';
 
+function operacaoLenta() {
+  let c;
+  for (let i = 0; i < 10000000; i++) {
+    c = i + i / 10;
+  }
+  return c;
+}
+
 const HookUseMemo = () => {
   const [contar, setContar] = React.useState(0);
-  const valor = React.useMemo(() => {
-    let localItem;
-    if (window.localStorage.getItem('dados')) {
-      localItem = window.localStorage.getItem('dados');
-      console.log('Use memo foi ativado e HÁ item no localStorage')
-      return localItem;
-    }
-    console.log('Use memo foi ativado e NÃO há item no localStorage')
-    return null;
-  }, [])
+  const t1 = performance.now();
+  const valor = operacaoLenta();
   console.log(valor);
+  console.log(performance.now() - t1);
   return (
     <>
       <button onClick={() => setContar(contar + 1)}>Contador= {contar}</button>
