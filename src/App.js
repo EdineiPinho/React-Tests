@@ -1,10 +1,10 @@
 import React from 'react';
-import HookUseRef from './Hooks/HookUseRef/HookUseRef';
+import HookUseMemo from './Hooks/HookUseMemo/HookUseMemo';
 
 const App = () => {
 
   return (<React.Fragment>
-    <HookUseRef />
+    <HookUseMemo />
   </React.Fragment>);
 };
 
