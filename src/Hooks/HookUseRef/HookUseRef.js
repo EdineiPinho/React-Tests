@@ -15,13 +15,18 @@ const HookUseRef = () => {
   const estiloBotao = {
     width: '32px',
     height: '32px',
-    marginLeft: '12px',
     color: 'red',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    textDecoration: 'none',
+    padding: '12px'
   };
   function handleClick() {
-    setTask([...task, input]);
-    setLocalStorage([...task, input]);
+    if (input !== '') {
+      setTask([...task, input]);
+      setLocalStorage([...task, input]);
+    } else {
+      inputElement.current.setAttribute('placeholder', 'Tem que digiar uma tarefa aqui...');
+    }
     setInput('');
     inputElement.current.focus();
   }
@@ -62,7 +67,7 @@ const HookUseRef = () => {
       <h2 style={{ fontFamily: 'sans-serif', paddingTop: '24px' }}>Lista de Tarefas:</h2>
       <ul ref={listElements}>
         {task.map((tarefa, index) => (
-          <li id={`id${index}`} key={index} className="listItem">{tarefa}<a href='/' style={estiloBotao} title="Excluir tarefa" onClick={excluirTarefa}>x</a></li>
+          <li id={`id${index}`} key={index} className="listItem">{tarefa}<a href='/' style={estiloBotao} title="Excluir tarefa" onClick={excluirTarefa}><sup>x</sup></a></li>
         ))}
       </ul>
     </React.Fragment>)
