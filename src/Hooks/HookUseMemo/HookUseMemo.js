@@ -11,7 +11,7 @@ function operacaoLenta() {
 const HookUseMemo = () => {
   const [contar, setContar] = React.useState(0);
   const t1 = performance.now();
-  const valor = React.useMemo(() => operacaoLenta(), []);
+  React.useMemo(() => operacaoLenta(), []);
   console.log(performance.now() - t1);
   return (
     <>
