@@ -1,12 +1,12 @@
 import React from 'react';
-import HookUseCallbackSample2 from './Hooks/HookUseCallback/HookUseCallbackSample2';
-
+import Produto from './Hooks/HookUseContext/Produto';
 const App = () => {
 
   return (
-    <React.Fragment>
-      <HookUseCallbackSample2 />
-    </React.Fragment>);
+    <>
+      <Produto />
+    </>
+  )
 };
 
 export default App;
