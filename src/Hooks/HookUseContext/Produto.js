@@ -1,12 +1,16 @@
 import React from 'react'
-import HookUseContext from './HookUseContext'
+import { GlobalContext } from './GlobalContext';
 
 const Produto = () => {
-  const dados = React.useContext(HookUseContext);
+  const global = React.useContext(GlobalContext);
 
-  console.log(dados);
   return (
-    <div>Nome: {dados.nome}</div>
+    <div>Contador: {global.contar} <br /><br />
+      <button onClick={global.adicionarUm}>Adicionar 1</button>
+      <br />
+      <br />
+      <button onClick={global.adicionarDois}>Adicionar 2</button>
+    </div>
   )
 }
 
