@@ -1,15 +1,25 @@
 import React from 'react'
-import { GlobalContext } from './GlobalContext';
+import { GlobalContext } from './GlobalContext'
 
 const Produto = () => {
-  const global = React.useContext(GlobalContext);
-
+  const { dados } = React.useContext(GlobalContext);
+  console.log(dados);
+  if (dados === null) return null;
   return (
-    <div>Contador: {global.contar} <br /><br />
-      <button onClick={global.adicionarUm}>Adicionar 1</button>
-      <br />
-      <br />
-      <button onClick={global.adicionarDois}>Adicionar 2</button>
+    <div>
+      <ul style={{
+        list:
+          'none'
+      }}><h2>Produtos{' '}</h2>
+        {dados.map((produto) => (
+          <li key={produto.id}>
+            <ul style={{ listStyle: 'none' }}>{produto.nome}
+              <li>R$: {produto.preco}</li>
+              <li>{produto.descricao}</li>
+              <li><img width={'300px'} src={produto.fotos[0].src} alt={produto.fotos[0].titulo} /></li>
+            </ul>
+          </li>
+        ))}</ul>
     </div>
   )
 }
