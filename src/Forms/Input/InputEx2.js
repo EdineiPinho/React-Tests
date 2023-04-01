@@ -1,13 +1,19 @@
 import React from 'react'
 
 const Input = () => {
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-
+  const [form, setForm] = React.useState({
+    nome: '',
+    email: ''
+  });
 
   function handleSubmit(event) {
     event.preventDefault();
     document.getElementById('inscicao').style.display = "block";
+  }
+
+  function handleChange({ target }) {
+    const { id, value } = target;
+    setForm({ ...form, [id]: value });
   }
 
   return (
@@ -16,20 +22,20 @@ const Input = () => {
       <input
         id='nome'
         type='text'
-        value={name}
+        value={form.nome}
         name="nome"
         placeholder='Digite aqui seu nome'
-        onChange={({ target }) => setName(target.value)} />
+        onChange={handleChange} />
       <label htmlFor='email'>Seu email:</label>
       <input
         id='email'
         type='text'
-        value={email}
+        value={form.email}
         name="email"
         placeholder='Digite aqui seu email'
-        onChange={({ target }) => setEmail(target.value)} />
+        onChange={handleChange} />
       <button>Enviar</button>
-      <p id="inscicao" style={{ display: 'none' }}>Olá, {name}. Enviamos um email para {email}, clique no link para confirmar sua inscrição</p>
+      <p id="inscicao" style={{ display: 'none' }}>Olá, {form.nome}. Enviamos um email para {form.email}, clique no link para confirmar sua inscrição.</p>
     </form>
   )
 }

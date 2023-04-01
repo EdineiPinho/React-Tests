@@ -1,5 +1,5 @@
 import React from 'react'
-import Input from './Forms/Input/Input'
+import Input from './Forms/Input/InputEx2'
 
 const App = () => {
   return (
