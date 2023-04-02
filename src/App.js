@@ -1,10 +1,10 @@
 import React from 'react'
-import Select from './Forms/Select/Select'
+import Radio from './Forms/Radio/Radio'
 
 const App = () => {
   return (
     <div>
-      <Select />
+      <Radio />
     </div>
   )
 }
