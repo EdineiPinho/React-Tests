@@ -34,7 +34,7 @@ const Radio = () => {
           type='radio'
           name='cor'
           value='vermelho'
-          id='red'
+          id='firebrick'
           onClick={({ target }) => setCor(target.value)}
           onChange={({ target }) => setTextcolor(target.id)}
         />
@@ -45,7 +45,7 @@ const Radio = () => {
           type='radio'
           name='cor'
           value='azul'
-          id='blue'
+          id='dodgerblue'
           onClick={({ target }) => setCor(target.value)}
           onChange={({ target }) => setTextcolor(target.id)}
         />
