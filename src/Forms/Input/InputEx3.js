@@ -19,7 +19,9 @@
 import React from 'react'
 
 const InputEx3 = () => {
-  const [form, setForm] = React.useState({ name: '', email: '', password: '', cep: '', street: '', number: '', neighbor: '', city: '', state: '' })
+  const [form, setForm] = React.useState({ name: '', email: '', password: '', cep: '', street: '', number: '', neighbor: '', city: '', state: '' });
+
+  const [response, setResponse] = React.useState(null);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -31,12 +33,26 @@ const InputEx3 = () => {
       // form is the object with form data
       body: JSON.stringify(form),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        response.json();
+        setResponse(response);
+      })
       .then((data) => {
         console.log('Sucesso', data);
+        document.getElementById('message').innerText = "Formulário enviado com sucesso.";
+        document.getElementById('message').style.display = "block";
+        console.log(form);
+        setTimeout(() => {
+          document.getElementById('message').style.display = "none";
+        }, 3000);
       })
       .catch((error) => {
         console.log('Erro: ', error);
+        document.getElementById('message').innerText = "Erro ao enviar o furmário.";
+        document.getElementById('message').style.display = "block";
+        setTimeout(() => {
+          document.getElementById('message').style.display = "none";
+        }, 3000);
       });
   }
 
@@ -89,6 +105,8 @@ const InputEx3 = () => {
           />
         </div>
       ))}
+      <p id='message' style={{ display: 'none' }}>Formulário enviado.</p>
+      {response && response.ok && <p>Formulário enviado</p>}
       <button type='submit'>Enviar</button>
     </form>
   )
