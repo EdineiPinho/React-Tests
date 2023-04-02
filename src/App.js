@@ -1,10 +1,10 @@
 import React from 'react'
-import TextArea from './Forms/TextArea/TextArea'
+import Select from './Forms/Select/Select'
 
 const App = () => {
   return (
     <div>
-      <TextArea />
+      <Select />
     </div>
   )
 }
