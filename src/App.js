@@ -1,10 +1,10 @@
 import React from 'react'
-import Input from './Forms/Input/InputEx3'
+import TextArea from './Forms/TextArea/TextArea'
 
 const App = () => {
   return (
     <div>
-      <Input />
+      <TextArea />
     </div>
   )
 }
