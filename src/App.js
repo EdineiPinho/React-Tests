@@ -1,5 +1,5 @@
 import React from 'react'
-import Checkbox from './Forms/Checkbox/CheckboxEx1'
+import Checkbox from './Forms/Checkbox/CheckboxEx2'
 
 const App = () => {
   return (
