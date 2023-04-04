@@ -1,11 +1,11 @@
 import React from 'react'
-import UsingReactBootstrap from './CSS/CSS Frameworks/UsingReactBootstrap'
+import Screen from './CSS/Animações 1/Screen'
 
 
 const App = () => {
   return (
     <>
-      <UsingReactBootstrap />
+      <Screen />
     </>
   )
 }
