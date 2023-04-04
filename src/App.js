@@ -1,11 +1,11 @@
 import React from 'react'
-import Produto from './CSS/CSS Modules/Produto'
+import StyleComponents from './CSS/Styled Components/StyleComponents'
 
 
 const App = () => {
   return (
     <>
-      <Produto />
+      <StyleComponents />
     </>
   )
 }
