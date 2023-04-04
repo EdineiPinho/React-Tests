@@ -1,11 +1,11 @@
 import React from 'react'
-import Screen from './Challenge/Form/Screen'
+import Title from './CSS/Title'
 
 
 const App = () => {
   return (
     <>
-      <Screen />
+      <Title />
     </>
   )
 }
