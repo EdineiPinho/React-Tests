@@ -1,7 +1,10 @@
+button {
+  margin-bottom: 1rem;
+}
+
 .animeLeft {
   opacity: 0;
   transform: translateX(-20px);
-  transform: scale(0.6);
   animation: animeLeft .3s forwards;
 }
 
@@ -9,5 +12,32 @@
   to {
     opacity: 1;
     transform: initial;
+  }
+}
+
+.animeDown {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: animeDown .3s forwards;
+}
+
+@keyframes animeDown {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.animeScale {
+  opacity: 0;
+  /* transform: translate(50px) rotate(180deg); */
+  transform: matrix(1, 0, 0.6, 1, 250, 0);
+  animation: animeScale .3s forwards;
+}
+
+@keyframes animeScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Screen from './CSS/Animações 1/Screen'
+import Screen from './CSS/Animações 2/Screen'
 
 
 const App = () => {
