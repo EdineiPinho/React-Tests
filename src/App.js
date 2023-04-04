@@ -1,5 +1,5 @@
 import React from 'react'
-import Screen from './CSS/Animações 2/Screen'
+import Screen from './React Router/Link/Screen'
 
 
 const App = () => {
