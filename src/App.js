@@ -1,11 +1,11 @@
 import React from 'react'
-import StyleComponents from './CSS/Styled Components/StyleComponents'
+import UsingReactBootstrap from './CSS/CSS Frameworks/UsingReactBootstrap'
 
 
 const App = () => {
   return (
     <>
-      <StyleComponents />
+      <UsingReactBootstrap />
     </>
   )
 }
