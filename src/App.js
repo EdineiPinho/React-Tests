@@ -1,11 +1,11 @@
 import React from 'react'
-import Title from './CSS/Title'
+import Produto from './CSS/CSS Modules/Produto'
 
 
 const App = () => {
   return (
     <>
-      <Title />
+      <Produto />
     </>
   )
 }

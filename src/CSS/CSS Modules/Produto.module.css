@@ -1,0 +1,19 @@
+.titulo {
+  color: #43c;
+  font-weight: bold;
+  font-family: 'sans-serif';
+}
+
+.preco {
+  font-style: italic;
+}
+
+.comprar {
+  background-color: #009aff;
+  color: #000e18;
+}
+
+.comprar:hover {
+  background-color: #000e18;
+  color: #009aff;
+}
