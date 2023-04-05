@@ -21,12 +21,14 @@ nav>ul>li>a {
   padding: 0.5rem 1.6rem;
   border-radius: 5px;
   width: 5rem;
+  border: 1px solid #cb3233;
 }
 
 nav>ul>li>a:hover {
   text-decoration: none;
-  color: #ff3e40;
+  color: #ff703e;
   background: #1c0000;
+  border: 1px solid #ff703e;
 }
 
 .ativo {

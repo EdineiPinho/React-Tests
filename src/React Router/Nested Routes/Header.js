@@ -32,7 +32,6 @@ const Header = () => {
   React.useEffect(() => {
   }, [location]);
 
-  console.log(location);
   rota();
   function handleClick({ target }) {
     let pagina = target.attributes.href.value;
