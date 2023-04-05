@@ -1,5 +1,5 @@
 import React from 'react'
-import Screen from './React Router/useParams/Screen'
+import Screen from './React Router/Nested Routes/Screen'
 
 
 const App = () => {
