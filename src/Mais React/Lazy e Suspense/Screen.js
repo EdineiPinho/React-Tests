@@ -3,7 +3,7 @@ import React from 'react'
 const Contato = React.lazy(() => import('./Contato'))
 
 const Screen = () => {
-  const [ativo, setAtivo] = React.useState(false)
+  const [ativo, setAtivo] = React.useState(true)
 
   return (
     <div>

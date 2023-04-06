@@ -1,5 +1,5 @@
 import React from 'react'
-import Screen from './Mais React/Lazy e Suspense/Screen'
+import Screen from './Mais React/Memo/Screen'
 
 
 const App = () => {
