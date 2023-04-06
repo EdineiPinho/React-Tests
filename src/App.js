@@ -1,5 +1,5 @@
 import React from 'react'
-import Screen from './Mais React/useReducer/Screen'
+import Screen from './Mais React/Classes/Screen'
 
 
 const App = () => {
